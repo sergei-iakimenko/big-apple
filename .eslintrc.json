@@ -1,6 +1,10 @@
 {
-  "extends": ["next/core-web-vitals",
-  "plugin:react-compiler/recommended"
+  "extends": ["next/core-web-vitals"
   ],
-  "plugins": ["react-compiler"]
+  "plugins": [
+    "eslint-plugin-react-compiler",
+    "react-compiler"],
+  "rules": {
+    "react-compiler/react-compiler": "error"
+  }
 }
