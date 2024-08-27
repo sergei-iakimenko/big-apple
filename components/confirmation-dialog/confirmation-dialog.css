@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  dialog::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      slategray,
+      gainsboro,
+      silver,
+      whitesmoke
+    );
+    opacity: 0.75;
+  }
+}
+
+dialog {
+  width: 80vw;
+}
+
+@screen sm {
+  dialog {
+    width: 30vw;
+  }
+}
+
+@screen lg {
+  dialog {
+    width: 17rem;
+    height: 8rem;
+  }
+}

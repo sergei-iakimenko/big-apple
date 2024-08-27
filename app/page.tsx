@@ -1,6 +1,6 @@
 'use client';
 import {useEffect, useState} from 'react';
-import {ConfirmationDialog} from './confirmation-dialog';
+import {ConfirmationDialog} from '../components/confirmation-dialog/confirmation-dialog';
 import {Main} from '@/components/main';
 
 export default function Home() {
