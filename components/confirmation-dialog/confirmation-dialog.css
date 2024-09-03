@@ -13,21 +13,44 @@
     );
     opacity: 0.75;
   }
-}
 
-dialog {
-  width: 80vw;
-}
-
-@screen sm {
   dialog {
-    width: 30vw;
+    width: 80vw;
+    transition: opacity 0.4s cubic-bezier(0.4, 1.6, 0.4, 0.8),
+    scale 0.4s cubic-bezier(0.4, 1.6, 0.4, 0.8), overlay 0.4s allow-discrete,
+    display 0.4s allow-discrete;
+
+    opacity: 0;
+    scale: 0;
+
+    &[open] {
+      opacity: 1;
+      scale: 1;
+    }
+
   }
-}
 
-@screen lg {
-  dialog {
-    width: 17rem;
-    height: 8rem;
+  @screen sm {
+    dialog {
+      width: 30vw;
+    }
+  }
+
+  @screen lg {
+    dialog {
+      width: 17rem;
+      height: 8rem;
+    }
+  }
+
+  :root {
+    --base-hue: 190deg;
+  }
+
+  @starting-style {
+    dialog[open] {
+      opacity: 0;
+      scale: 0;
+    }
   }
 }

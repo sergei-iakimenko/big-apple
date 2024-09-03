@@ -16,7 +16,7 @@ export function ConfirmationDialog(props: { confirmMaturity: (permitted: boolean
     }
   }
 
-  return <dialog id='validationDialog' className='sm:foo-class p-4 rounded-lg'>
+  return <dialog id='validationDialog' className='sm:foo-class p-4 rounded-lg' aria-label='confirmationDialog' tabIndex={-1}>
     <fieldset>
       <legend className='mb-4 text-lg'>Are you over 21 years old?</legend>
       <div className='flex justify-between'>
@@ -24,7 +24,7 @@ export function ConfirmationDialog(props: { confirmMaturity: (permitted: boolean
           <input className='mr-1 shadow-sm' type='radio' id='yes' value='yes' name='answer'></input>
           <label className='mr-4 text-base' htmlFor='yes'>Yes</label>
           <input className='mr-1 shadow-sm' type='radio' id='no' value='no' name='answer'></input>
-          <label htmlFor='no'>No</label>
+          <label className='text-base' htmlFor='no'>No</label>
         </div>
         <button className='p-1 rounded-lg bg-amber-600 text-amber-50 shadow-lg' onClick={handleClick} autoFocus>Confirm</button>
       </div>

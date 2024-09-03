@@ -1,7 +1,7 @@
 'use client';
 import {useEffect, useState} from 'react';
-import {ConfirmationDialog} from '../components/confirmation-dialog/confirmation-dialog';
-import {Main} from '@/components/main';
+import {ConfirmationDialog} from '@/components/confirmation-dialog/confirmation-dialog';
+import {Main} from '@/components/main/main';
 
 export default function Home() {
   const [permitted, setPermitted] = useState<boolean | null>(null);
@@ -13,6 +13,7 @@ export default function Home() {
 
   function handleConfirmation(confirmed: boolean): void {
     setPermitted(confirmed);
+    localStorage.setItem('permitted', String(confirmed));
   }
 
   return (

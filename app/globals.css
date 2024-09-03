@@ -1,0 +1,14 @@
+html {
+  height: 100%;
+  background: linear-gradient(
+    45deg, #5c8d89, #74b49b);
+
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(
+      45deg, #495057, #212529);
+  }
+}
+
+body {
+  perspective: 40vw;
+}
