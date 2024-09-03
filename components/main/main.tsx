@@ -49,8 +49,7 @@ export function Main({permitted}: { permitted: boolean }) {
             <button>Subproducts</button>
           </li>
         </ul>
-      </>
-      :
+      </> :
       <span>Please come back when you&apos;re 21</span>
   )
 }
